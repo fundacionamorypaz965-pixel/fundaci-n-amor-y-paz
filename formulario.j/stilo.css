@@ -1,0 +1,226 @@
+/* Fondo profesional con imagen difuminada */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+              url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+
+
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 5px 0;
+}
+
+header p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Navegación */
+nav {
+  background: rgba(0,0,0,0.8);
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f9d342;
+}
+
+/* Secciones */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #f9d342;
+  margin-bottom: 20px;
+}
+
+/* Tarjetas de proyectos */
+.proyectos, .donaciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card, .card-donacion {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.card:hover, .card-donacion:hover {
+  transform: translateY(-5px);
+}
+
+/* Galería */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Formulario */
+form {
+  background: rgba(0,0,0,0.5);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  text-align: left;
+  color: #f9d342;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+button {
+  background: #f9d342;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #ffdf5d;
+}
+
+/* Footer */
+footer {
+  background: rgba(0,0,0,0.85);
+  padding: 40px 20px 15px;
+}
+
+.footer-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.footer-col {
+  min-width: 200px;
+}
+
+.footer-col h3 {
+  color: #f9d342;
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+/* Redes Sociales */
+.social img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.social img:hover {
+  transform: scale(1.2);
+}
+
+/* Animación entrada */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .proyectos, .donaciones {
+    flex-direction: column;
+  }
+
+  .footer-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+}

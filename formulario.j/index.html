@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundación Amor y Paz del Catatumbo</title>
+  <link rel="stylesheet" href="stilo.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-contenido">
+      <img src="logo.jpg" alt="Logo Fundación Amor y Paz del Catatumbo" class="logo">
+      <div>
+        <h1>Fundación Amor y Paz del Catatumbo</h1>
+        <p>Trabajando por la paz, la solidaridad y el bienestar de nuestra comunidad</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#galeria">Galería</a>
+    <a href="#registro">Registro</a>
+    <a href="#donaciones">Donaciones</a>
+  </nav>
+
+  <!-- SECCIÓN NOSOTROS -->
+  <section id="nosotros" class="fade-in">
+    <h2>Quiénes Somos</h2>
+    <p>Somos una fundación comprometida con el bienestar social y el desarrollo integral del Catatumbo.</p>
+  </section>
+
+  <!-- SECCIÓN PROYECTOS -->
+  <section id="proyectos" class="fade-in">
+    <h2>Nuestros Proyectos</h2>
+    <div class="proyectos">
+      <div class="card">
+        <h3>Ayuda Humanitaria</h3>
+        <p>Apoyo a comunidades vulnerables con alimentos, ropa y atención básica.</p>
+      </div>
+      <div class="card">
+        <h3>Programas Educativos</h3>
+        <p>Becas, talleres y actividades para el desarrollo académico y cultural.</p>
+      </div>
+      <div class="card">
+        <h3>Apoyo a Víctimas</h3>
+        <p>Acompañamiento psicosocial y orientación para la resiliencia comunitaria.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN GALERÍA -->
+  <section id="galeria" class="fade-in">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="img1.jpg" alt="Actividad 1">
+      <img src="img2.jpg" alt="Actividad 2">
+      <img src="img3.jpg" alt="Actividad 3">
+      <img src="img4.jpg" alt="Actividad 4">
+    </div>
+  </section>
+
+  <!-- SECCIÓN REGISTRO -->
+  <section id="registro" class="fade-in">
+    <h2>Registro de Personas Beneficiarias</h2>
+    <p>Completa este formulario para participar en nuestros programas de apoyo.</p>
+
+    <form id="registroForm">
+      <label>Nombre completo:</label>
+      <input type="text" name="nombre" required>
+
+      <label>Tipo de identificación:</label>
+      <select name="tipo_id" required>
+        <option value="">Seleccione...</option>
+        <option value="CC">Cédula de ciudadanía</option>
+        <option value="TI">Tarjeta de identidad</option>
+        <option value="RC">Registro civil</option>
+      </select>
+
+      <label>Número de identificación:</label>
+      <input type="text" name="numero_id" required>
+
+      <label>Teléfono de contacto:</label>
+      <input type="tel" name="telefono" required>
+
+      <label>Municipio / Barrio:</label>
+      <input type="text" name="ubicacion" required>
+
+      <label>Tipo de ayuda solicitada:</label>
+      <select name="ayuda" required>
+        <option value="">Seleccione...</option>
+        <option value="alimentaria">Alimentaria</option>
+        <option value="económica">Económica</option>
+        <option value="vivienda">Vivienda</option>
+        <option value="educación">Educación</option>
+        <option value="otros">Otros</option>
+      </select>
+
+      <label>Correo electrónico (opcional):</label>
+      <input type="email" name="correo">
+
+      <button type="submit">Enviar Registro</button>
+    </form>
+  </section>
+
+  <!-- SECCIÓN DONACIONES -->
+  <section id="donaciones" class="fade-in">
+    <h2>Haz tu Donación</h2>
+    <p>Tu aporte nos ayuda a seguir construyendo paz y bienestar en el Catatumbo.</p>
+
+    <div class="donaciones">
+      <div class="card-donacion">
+        <h3>💳 Donar por Transferencia</h3>
+        <p>Cuenta Bancaria: 123-456-789 <br> Banco: Ejemplo S.A.</p>
+      </div>
+      <div class="card-donacion">
+        <h3>📲 Donar por Nequi / Daviplata</h3>
+        <p>Número: 300 123 4567</p>
+      </div>
+      <div class="card-donacion">
+        <h3>🌍 Donar Internacionalmente</h3>
+        <p>Próximamente habilitaremos esta opción</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-contenido">
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <p>📍 Catatumbo, Colombia</p>
+        <p>📧 fundacion@amorypaz.org</p>
+        <p>📞 +57 300 123 4567</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Síguenos</h3>
+        <div class="social">
+          <a href="https://www.facebook.com/Fundación-Amoypazdelcatatumbo" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/amorypazcatatumbo2024" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+          </a>
+          <a href="https://www.youtube.com/results?search_query=Fundación+Amor+y+paz+del+Catatumbo" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Enlaces</h3>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#donaciones">Donaciones</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>&copy; 2025 Fundación Amor y Paz del Catatumbo | Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Librería Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Script personalizado -->
+  <script src="script.js"></script>
+</body>
+</html>
