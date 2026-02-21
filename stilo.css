@@ -1,0 +1,599 @@
+/* Fondo profesional con imagen difuminada */
+
+body {
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 190, 90, 0.25), transparent 60%),
+    linear-gradient(rgba(40, 20, 0, 0.75), rgba(0, 0, 0, 0.9)),
+    url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1470&q=80');
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 5px 0;
+}
+
+header p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Navegación */
+nav {
+  background: rgba(0,0,0,0.8);
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f9d342;
+}
+
+/* Secciones */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #f9d342;
+  margin-bottom: 20px;
+}
+
+/* Tarjetas de proyectos */
+.proyectos, .donaciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card, .card-donacion {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.card:hover, .card-donacion:hover {
+  transform: translateY(-5px);
+}
+
+/* Galería */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Formulario */
+form {
+  background: rgba(0,0,0,0.5);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  text-align: left;
+  color: #f9d342;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+button {
+  background: #f9d342;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #ffdf5d;
+}
+
+/* Footer */
+footer {
+  background: rgba(0,0,0,0.85);
+  padding: 40px 20px 15px;
+}
+
+.footer-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.footer-col {
+  min-width: 200px;
+}
+
+.footer-col h3 {
+  color: #f9d342;
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+/* Redes Sociales */
+.social img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.social img:hover {
+  transform: scale(1.2);
+}
+
+/* Animación entrada */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .proyectos, .donaciones {
+    flex-direction: column;
+  }
+
+  .footer-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+/* Botón flotante de WhatsApp */
+#whatsappBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 999;
+}
+
+/* Efecto cuando se pasa el mouse */
+#whatsappBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.4);
+}
+
+/* Icono interno */
+#whatsappBtn img {
+  width: 38px;
+  height: 38px;
+}
+
+
+
+
+
+/* Ondas animadas */
+.fondo-ondas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.fondo-ondas span {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 150, 255, 0.12);
+  filter: blur(120px);
+
+  animation: movimientoOndas 12s infinite linear;
+}
+
+@keyframes movimientoOndas {
+  0% {
+    transform: translate(-20%, -20%) rotate(0deg);
+  }
+  50% {
+    transform: translate(10%, 10%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-20%, -20%) rotate(360deg);
+  }
+}
+
+
+
+
+
+/* ======================================================
+   AVANCE 9 – MEJORAS VISUALES SUAVES (NO ROMPE MÓVIL)
+   ====================================================== */
+
+/* Sección activa al navegar */
+section:target {
+  outline: 2px dashed rgba(249, 211, 66, 0.6);
+  outline-offset: 10px;
+  border-radius: 10px;
+}
+
+/* Mensaje visual cuando se envía el formulario */
+form.enviado {
+  animation: enviadoGlow 1.2s ease;
+}
+
+@keyframes enviadoGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(249,211,66,0);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(249,211,66,0.8);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(249,211,66,0);
+  }
+}
+
+/* Mejora de legibilidad en móvil (SIN agrandar nada) */
+@media (max-width: 480px) {
+  section p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Detalle elegante en títulos */
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f9d342;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 15px rgba(0, 180, 255, 0.7),
+    0 0 35px rgba(0, 180, 255, 0.4);
+}
+
+
+
+/* ===== MENSAJE DE ÉXITO (AVANCE 12) ===== */
+.mensaje-exito {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #2ecc71;
+  color: #ffffff;
+
+  padding: 10px 15px;
+  display: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  z-index: 2000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.mensaje-exito span {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.mensaje-exito button {
+  flex-shrink: 0;
+  background: #1a8a49;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+/* ===== MENSAJE DE ÉXITO MODERNO ===== */
+.mensaje-exito {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  
+  padding: 15px 25px;
+  border-radius: 12px;
+  
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  
+  font-weight: 600;
+  font-size: 15px;
+  
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  z-index: 3000;
+  
+  animation: aparecer 0.4s ease-out;
+}
+
+/* Botón */
+.mensaje-exito button {
+  background: white;
+  color: #28a745;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.mensaje-exito button:hover {
+  background: #f1f1f1;
+  transform: scale(1.05);
+}
+
+/* Animación */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+
+
+
+/* ===== MENSAJE DE ÉXITO DEFINITIVO ===== */
+#mensajeExito {
+  position: fixed !important;
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+
+  background: linear-gradient(135deg, #28a745, #20c997) !important;
+  color: white !important;
+
+  padding: 18px 30px !important;
+  border-radius: 15px !important;
+
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  font-weight: 600;
+  font-size: 16px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
+  z-index: 9999 !important;
+
+  animation: aparecer 0.4s ease-out;
+}
+
+#mensajeExito button {
+  background: white;
+  color: #28a745;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#mensajeExito button:hover {
+  background: #f1f1f1;
+  transform: scale(1.05);
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+
+
+
+
+/* ===== NOTIFICACIÓN BARRA COMPLETA ===== */
+.notificacion {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+  padding: 18px 0;
+  text-align: center;
+  
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.4s ease;
+  
+  z-index: 9999;
+}
+
+/* Mostrar */
+.notificacion.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Éxito */
+.notificacion.exito {
+  background: linear-gradient(90deg, #28a745, #20c997);
+}
+
+/* Error */
+.notificacion.error {
+  background: linear-gradient(90deg, #dc3545, #ff6b6b);
+}
+
+
+
+
+
+.notificacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Botón aceptar */
+.notificacion button {
+  background: white;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.notificacion button:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Beneficiarios</title>
+    <link rel="stylesheet" href="stilo.css">
+
+
+<script>
+  const contraseñaCorrecta = "sena2025"; // Puedes cambiarla
+
+  const ingreso = prompt("🔐 Ingrese la contraseña para ver los registros:");
+
+  if (ingreso !== contraseñaCorrecta) {
+    alert("❌ Contraseña incorrecta. No tiene permiso para ver esta información.");
+    window.location.href = "index.html";
+  }
+</script>
+
+
+
+
+
+
+
+    <style>
+        .contenedor-tarjetas {
+            padding: 30px;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .tarjeta-registro {
+            background: rgba(255,255,255,0.15);
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            backdrop-filter: blur(6px);
+            border-left: 6px solid #f9d342;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            transition: transform 0.2s;
+        }
+
+        .tarjeta-registro:hover {
+            transform: translateY(-6px);
+        }
+
+        .tarjeta-registro h3 {
+            margin: 0 0 5px 0;
+            color: #f9d342;
+        }
+
+        .tarjeta-registro p {
+            margin: 5px 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            color: #f9d342;
+        }
+
+        .volver {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .volver:hover {
+            color: #f9d342;
+        }
+    </style>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <h1>Registros de Personas Beneficiarias</h1>
+
+    <a class="volver" href="index.html">⬅ Volver al inicio</a>
+
+    <div class="contenedor-tarjetas" id="contenedorRegistros"></div>
+
+    <script src="registros.js"></script>
+
+
+</body>
+</html>
